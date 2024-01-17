@@ -1,5 +1,42 @@
 {
-    "users": [],
-    "albums": [],
-    "photos": []
+  "users": [
+    {
+      "id": "1",
+      "name": "Jonathan"
+    },
+    {
+      "id": "bab2",
+      "name": "Pablo Gislason"
+    },
+    {
+      "id": "e73c",
+      "name": "Erika Fay"
+    },
+    {
+      "id": "ac64",
+      "name": "Angel Brekke"
+    },
+    {
+      "id": "5b5e",
+      "name": "Jimmy Hilll"
+    },
+    {
+      "id": "1300",
+      "name": "Mr. Peter Bechtelar"
+    },
+    {
+      "id": "6379",
+      "name": "Drew Hansen"
+    },
+    {
+      "id": "fc2b",
+      "name": "Randolph Dickinson"
+    },
+    {
+      "id": "4fb2",
+      "name": "Kerry Bashirian"
+    }
+  ],
+  "albums": [],
+  "photos": []
 }

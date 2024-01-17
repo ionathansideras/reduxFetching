@@ -1,5 +1,7 @@
 import {usersReducer} from "./slices/usersSlice";
 import { configureStore } from "@reduxjs/toolkit";
+import { fetchUsers } from "./thunks/fetchUsers";
+import { addUser } from "./thunks/addUser";
 
 const store = configureStore({
     reducer: {
@@ -8,3 +10,4 @@ const store = configureStore({
 });
 
 export default store;
+export { fetchUsers, addUser }
