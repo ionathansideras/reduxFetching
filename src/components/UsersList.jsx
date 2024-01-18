@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchUsers, addUser } from "../redux/store";
+import { fetchUsers, addUser, deleteUser } from "../redux/store";
 import Button from "./Button.jsx";
+import UsersListItem from "./UsersListItem.jsx";
 
 export default function UsersList() {
     const dispatch = useDispatch();
@@ -14,28 +15,23 @@ export default function UsersList() {
     const handleUserAdd = () => {
         dispatch(addUser());
     };
+
     if (isLoading) {
         return <div>Loading...</div>;
     }
+
     if (error) {
         return <div>Error</div>;
     }
 
-    const renderedUsers = data.map((user) => {
-        return (
-            <div key={user.id} style={{ display: "flex" }}>
-                <button>x</button>
-                <div>{user.name}</div>
-                <button>{">"}</button>
-            </div>
-        );
-    });
     return (
         <div>
             <div>
                 <Button onClick={handleUserAdd}>add user</Button>
-             </div>
-            {renderedUsers}
+            </div>
+            {data.map((user) => (
+                <UsersListItem key={user.id} user={user} />
+            ))}
         </div>
     );
 }
